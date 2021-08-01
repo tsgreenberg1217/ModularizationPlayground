@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 
-class Converters {
+internal class Converters {
 
     @TypeConverter
     fun fromStringToListOfString(json: String): List<String> {
