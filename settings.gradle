@@ -1,0 +1,6 @@
+rootProject.name = "BindingTest"
+include ':app'
+include ':weathermodule'
+include ':common:network'
+include ':common:data_utility'
+include ':common:database'
