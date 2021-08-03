@@ -5,6 +5,7 @@ import com.example.api.WeatherService
 import com.example.data_utility.DataState
 import com.example.data_utility.mappers.DbMapper
 import com.example.data_utility.mappers.NetworkMapper
+import com.example.database.CityDao
 import com.example.database.WeatherDatabase
 import com.example.modular_app.models.CityWeatherResult
 
@@ -15,7 +16,7 @@ import javax.inject.Inject
 class WeatherRepository
 @Inject constructor(
     private val service: WeatherService,
-    private val db: WeatherDatabase,
+    private val cityDao: CityDao,
     private val cacheMapper: DbMapper,
     private val networkMapper: NetworkMapper
 
@@ -24,7 +25,6 @@ class WeatherRepository
     suspend fun getWeatherForCity(city: String): Flow<DataState<CityWeatherResult>> = flow {
 
         emit(DataState.Loading)
-        val cityDao = db.cityDao()
         cityDao.getCityByName(city)?.let {
             cacheMapper.entityToDomain(it).also { w ->
                 emit(DataState.Success(w))

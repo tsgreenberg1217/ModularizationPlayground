@@ -35,16 +35,4 @@ object GlobalModules {
     }
 
 
-    @Singleton
-    @Provides
-    fun providesWeatherDatabase(@ApplicationContext ctx: Context): WeatherRoomDatabase =
-        WeatherDatabaseBuilder.build(ctx)
-
-}
-
-@InstallIn(SingletonComponent::class)
-@Module
-abstract class WeatherBindings{
-    @Binds
-    abstract fun bindWeatherDatabase(db:WeatherRoomDatabase):WeatherDatabase
 }
