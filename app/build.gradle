@@ -51,10 +51,6 @@ dependencies {
 
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
-    def room_version = "2.3.0"
-//
-    implementation("androidx.room:room-runtime:$room_version")
-
     implementation project(':weathermodule')
     implementation project(':common:network')
     implementation project(':common:database')
