@@ -1,15 +1,24 @@
-package com.example.base.api
+package com.example.api
 
-import com.example.api.WeatherService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Singleton
 
-object WeatherServiceUtil {
-    private fun createRetrofitClient(): OkHttpClient {
+
+@InstallIn(SingletonComponent::class)
+@Module
+object WeatherServiceModule {
+    @Provides
+    @Singleton
+    fun provideRetrofitClient(): OkHttpClient {
         return OkHttpClient().newBuilder().apply {
             addInterceptor(HttpLoggingInterceptor().apply {
                 setLevel(HttpLoggingInterceptor.Level.BASIC)
@@ -18,22 +27,22 @@ object WeatherServiceUtil {
         }.build()
     }
 
-    private fun getGsonBuilder(): Gson = GsonBuilder().create()
+    @Provides
+    @Singleton
+    fun provideGsonBuilder(): Gson = GsonBuilder().create()
 
-    private fun getWeatherApi(gson: Gson, client: OkHttpClient): Retrofit.Builder {
+    @Provides
+    @Singleton
+    fun providesWeatherApi(gson: Gson, client: OkHttpClient): Retrofit.Builder {
         return Retrofit.Builder()
             .baseUrl("http://api.weatherstack.com/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
     }
 
-    private fun buildWeatherService(retrofit: Retrofit.Builder): WeatherService {
+    @Provides
+    @Singleton
+    fun providesWeatherService(retrofit: Retrofit.Builder): WeatherService {
         return retrofit.build().create(WeatherService::class.java)
-    }
-
-    fun getWeatherService(): WeatherService {
-        val client = createRetrofitClient()
-        val gson = getGsonBuilder()
-        return buildWeatherService(getWeatherApi(gson, client))
     }
 }

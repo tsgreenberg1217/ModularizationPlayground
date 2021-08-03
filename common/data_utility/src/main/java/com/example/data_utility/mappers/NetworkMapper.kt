@@ -1,6 +1,6 @@
 package com.example.data_utility.mappers
 
-import com.example.base.api.NetworkWeatherResponse
+import com.example.data_utility.models.NetworkWeatherResponse
 import com.example.data_utility.EntityMapper
 import com.example.modular_app.models.CityWeatherResult
 

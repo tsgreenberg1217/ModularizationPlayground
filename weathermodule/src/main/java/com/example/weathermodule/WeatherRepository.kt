@@ -1,12 +1,11 @@
 package com.example.weathermodule
 
-import com.example.base.api.NetworkWeatherResponse
+import com.example.data_utility.models.NetworkWeatherResponse
 import com.example.api.WeatherService
 import com.example.data_utility.DataState
 import com.example.data_utility.mappers.DbMapper
 import com.example.data_utility.mappers.NetworkMapper
 import com.example.database.CityDao
-import com.example.database.WeatherDatabase
 import com.example.modular_app.models.CityWeatherResult
 
 import kotlinx.coroutines.flow.Flow

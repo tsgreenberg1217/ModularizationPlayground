@@ -1,4 +1,4 @@
-package com.example.base.api
+package com.example.data_utility.models
 
 import com.google.gson.annotations.Expose
 

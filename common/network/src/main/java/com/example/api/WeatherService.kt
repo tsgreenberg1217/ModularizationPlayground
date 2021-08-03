@@ -1,6 +1,6 @@
 package com.example.api
 
-import com.example.base.api.NetworkWeatherResponse
+import com.example.data_utility.models.NetworkWeatherResponse
 import com.example.network.BuildConfig
 import retrofit2.http.GET
 import retrofit2.http.Query
