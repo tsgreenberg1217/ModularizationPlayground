@@ -6,7 +6,7 @@ import com.example.data_utility.DataState
 import com.example.data_utility.mappers.DbMapper
 import com.example.data_utility.mappers.NetworkMapper
 import com.example.database.CityDao
-import com.example.modular_app.models.CityWeatherResult
+import com.example.data_utility.models.CityWeatherResult
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

@@ -2,7 +2,7 @@ package com.example.data_utility.mappers
 
 import com.example.data_utility.CacheMapper
 import com.example.data_utility.models.CityWeatherCache
-import com.example.modular_app.models.CityWeatherResult
+import com.example.data_utility.models.CityWeatherResult
 
 class DbMapper : CacheMapper<CityWeatherCache, CityWeatherResult> {
     override fun entityToDomain(cache: CityWeatherCache): CityWeatherResult {

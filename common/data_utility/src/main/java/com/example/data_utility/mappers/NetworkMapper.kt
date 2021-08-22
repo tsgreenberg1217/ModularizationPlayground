@@ -2,7 +2,7 @@ package com.example.data_utility.mappers
 
 import com.example.data_utility.models.NetworkWeatherResponse
 import com.example.data_utility.EntityMapper
-import com.example.modular_app.models.CityWeatherResult
+import com.example.data_utility.models.CityWeatherResult
 
 class NetworkMapper :
     EntityMapper<NetworkWeatherResponse, CityWeatherResult> {

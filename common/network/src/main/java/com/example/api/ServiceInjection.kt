@@ -1,5 +1,6 @@
 package com.example.api
 
+import com.example.data_utility.mappers.NetworkMapper
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -45,4 +46,12 @@ object WeatherServiceModule {
     fun providesWeatherService(retrofit: Retrofit.Builder): WeatherService {
         return retrofit.build().create(WeatherService::class.java)
     }
+}
+
+@InstallIn(SingletonComponent::class)
+@Module
+object NetworkMappers{
+    @Provides
+    fun providesNetworkMapper(): NetworkMapper = NetworkMapper()
+
 }

@@ -2,6 +2,7 @@ package com.example.database
 
 import android.content.Context
 import androidx.room.Room
+import com.example.data_utility.mappers.DbMapper
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -41,4 +42,14 @@ object DaoModule {
 abstract class WeatherDatabaseBindings {
     @Binds
     abstract fun bindWeatherDatabase(db: WeatherRoomDatabase): WeatherDatabase
+}
+
+
+@Module
+@InstallIn(SingletonComponent::class)
+object DatabaseMappers {
+
+    @Provides
+    fun providesDbMapper(): DbMapper = DbMapper()
+
 }

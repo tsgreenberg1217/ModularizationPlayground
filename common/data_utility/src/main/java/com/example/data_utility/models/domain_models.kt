@@ -1,4 +1,4 @@
-package com.example.modular_app.models
+package com.example.data_utility.models
 
 data class CityWeatherResult(
     val name:String,
