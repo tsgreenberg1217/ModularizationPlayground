@@ -38,54 +38,9 @@ class Fragment_2 : BaseFragment(R.layout.fragment_2) {
                 is DataState.Loading -> {
                 }
                 else -> {
-
                 }
             }
         }
         weatherViewModel.getAllCities()
     }
-
-
-    fun getListOfDummyData(): List<CityWeatherResult> = mutableListOf<CityWeatherResult>().apply {
-        getDummyCities().forEach { name ->
-            add(
-                CityWeatherResult(
-                    name = name,
-                    country = "USA",
-                    lat = 12.2f,
-                    lon = 12.2f,
-                    localTime = Date().time,
-                    obsTime = "Today",
-                    icons = listOf(""),
-                    humidity = 80,
-                    feelsLike = 123,
-                    is_day = true,
-                    desc = listOf("")
-                )
-            )
-        }
-    }
-
-
-    fun getDummyCities(): List<String> = listOf(
-        "Miami",
-        "Orlando",
-        "Tampa",
-        "St. Augustine",
-        "Jacksonville",
-        "Sarastoa",
-        "Ft. Lauderdale",
-        "Delray Beach",
-        "Boca Raton",
-        "St. Petersburg",
-        "Daytona Beach",
-        "Dania Beach",
-        "Pensacola",
-        "Tallahassee",
-        "Gainesville",
-        "Lakeland",
-        "West Palm Beach",
-        "Boynton Beach",
-
-        )
 }

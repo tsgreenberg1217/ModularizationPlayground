@@ -25,6 +25,7 @@ class WeatherRecyclerViewAdapter(private val weatherList: MutableList<CityWeathe
     override fun getItemCount(): Int = weatherList.size
 
     fun updateCities(newCities:List<CityWeatherResult>){
+        // TODO: use diff util
         weatherList.clear()
         weatherList.addAll(newCities)
         notifyDataSetChanged()
@@ -40,17 +41,4 @@ class WeatherViewHolder(item: View) : RecyclerView.ViewHolder(item) {
         binding.weatherVHHumidityTxt.text = "Humidity: ${data.humidity.toString()}"
     }
 
-}
-
-object CityDiffCallback : DiffUtil.ItemCallback<CityWeatherResult>() {
-    override fun areItemsTheSame(oldItem: CityWeatherResult, newItem: CityWeatherResult): Boolean {
-        return oldItem == newItem
-    }
-
-    override fun areContentsTheSame(
-        oldItem: CityWeatherResult,
-        newItem: CityWeatherResult
-    ): Boolean {
-        return oldItem.name == newItem.name
-    }
 }

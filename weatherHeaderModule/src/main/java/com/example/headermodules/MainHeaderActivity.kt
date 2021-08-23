@@ -8,14 +8,14 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.headermodules.databinding.ActivityMainBinding
 import com.example.headermodules.viewmodels.HEADER
-import com.example.headermodules.viewmodels.HeadersViewmodel
+import com.example.headermodules.viewmodels.HeadersViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainHeaderActivity : AppCompatActivity() {
     private lateinit var mainActivityBinding: ActivityMainBinding
 
-    private val headersViewModel: HeadersViewmodel by viewModels()
+    private val headersViewModel: HeadersViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

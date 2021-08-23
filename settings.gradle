@@ -1,7 +1,6 @@
-rootProject.name = "BindingTest"
+rootProject.name = "ModulePlayground"
 include ':app'
-include ':weathermodule'
 include ':common:network'
 include ':common:data_utility'
 include ':common:database'
-include ':headermodules'
+include ':weatherHeaderModule'

@@ -9,7 +9,7 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.example.bindingtest"
+        applicationId "com.example.modulePlayground"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
@@ -53,8 +53,7 @@ dependencies {
 
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
-    implementation project(':weathermodule')
-    implementation project(':headermodules')
+    implementation project(':weatherHeaderModule')
     implementation project(':common:network')
     implementation project(':common:database')
     implementation project(':common:data_utility')
