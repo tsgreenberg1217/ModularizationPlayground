@@ -6,17 +6,19 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.example.bindingtest"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures{
+        viewBinding true
+    }
     buildTypes {
 
         debug {
@@ -52,6 +54,7 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     implementation project(':weathermodule')
+    implementation project(':headermodules')
     implementation project(':common:network')
     implementation project(':common:database')
     implementation project(':common:data_utility')
