@@ -1,9 +1,7 @@
 package com.example.modular_app.hilt
 
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
 
+// HERE IS AN EXAMPLE IF YOU WANT TO INJECT INTO A FEATURE MODULE
 
 //@EntryPoint
 //@InstallIn(SingletonComponent::class)
