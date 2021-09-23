@@ -37,9 +37,6 @@ class Fragment_1 : BaseFragment(R.layout.fragment_1) {
                 is DataState.Loading -> {
 
                 }
-                else -> {
-                    Log.d("FRAGMENT TEST", "Some other status")
-                }
             }
         }
     }
