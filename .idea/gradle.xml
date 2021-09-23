@@ -16,7 +16,7 @@
             <option value="$PROJECT_DIR$/common/data_utility" />
             <option value="$PROJECT_DIR$/common/database" />
             <option value="$PROJECT_DIR$/common/network" />
-            <option value="$PROJECT_DIR$/weatherHeaderModule" />
+            <option value="$PROJECT_DIR$/weatherHeaders" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
