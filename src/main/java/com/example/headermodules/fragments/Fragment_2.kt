@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.data_utility.DataState
+// some comment
 import com.example.data_utility.models.CityWeatherResult
 import com.example.headermodules.R
 import com.example.headermodules.recyclerViews.WeatherRecyclerViewAdapter
