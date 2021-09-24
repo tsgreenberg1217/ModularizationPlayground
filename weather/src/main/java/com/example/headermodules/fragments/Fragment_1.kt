@@ -14,6 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class Fragment_1 : BaseFragment(R.layout.fragment_1) {
+    // yet, another random comment
 
     val viewModel: WeatherViewModel by viewModels()
     lateinit var binding: Fragment1Binding
