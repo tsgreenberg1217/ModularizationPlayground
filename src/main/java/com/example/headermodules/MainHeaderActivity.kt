@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainHeaderActivity : AppCompatActivity() {
+    // random comment
     private lateinit var mainActivityBinding: ActivityMainBinding
 
     private val headersViewModel: HeadersViewModel by viewModels()
