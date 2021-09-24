@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class WeatherRepository
+// some comment
 @Inject constructor(
     private val service: WeatherService,
     private val cityDao: CityDao,
