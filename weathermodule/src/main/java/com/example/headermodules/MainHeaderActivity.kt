@@ -10,10 +10,9 @@ import com.example.headermodules.databinding.ActivityMainBinding
 import com.example.headermodules.viewmodels.HEADER
 import com.example.headermodules.viewmodels.HeadersViewModel
 import dagger.hilt.android.AndroidEntryPoint
-
+// this is the new version 1.0.0
 @AndroidEntryPoint
 class MainHeaderActivity : AppCompatActivity() {
-    // random comment
     private lateinit var mainActivityBinding: ActivityMainBinding
 
     private val headersViewModel: HeadersViewModel by viewModels()
